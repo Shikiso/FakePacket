@@ -6,7 +6,5 @@ PORT = 1234
 s = socket.socket()
 print("Connecting...")
 s.connect((HOST, PORT))
-
-while s:
-    print(s.recv(1024))
-
+print("Connected!")
+s.close()

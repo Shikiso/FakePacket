@@ -7,10 +7,10 @@ PORT = 1234
 s = socket.socket()
 s.bind((HOST, PORT))
 s.listen(1)
-
-conn, addr = s.accept()
-while conn:
-    conn.send(b"Hello")
-    time.sleep(5)
+print("Listening for connection...")
+while 1:
+    conn, addr = s.accept()
+    print("Connection made!\n", addr)
+    conn.close()
 
 s.close()
